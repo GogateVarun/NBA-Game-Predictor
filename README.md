@@ -10,4 +10,3 @@
 ## Overview
 
 Currently researching data sources and available data to narrow down project topic. Will return by Thursday with suggestions for the group and final decisions.
-
