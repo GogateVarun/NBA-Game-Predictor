@@ -23,7 +23,7 @@ To what extent do you agree with the following statement: "sleeping in separate 
 
 To what extent do you agree with the following statement: "we sleep better when we sleep in separate beds."
 
-To what extent do you agree with the following statement:ë_"our sex life has improved as a result of sleeping in separate beds."ë_
+To what extent do you agree with the following statement:ë_"our sex life has improved as a result of sleeping in separate beds."
 
 Which of the following best describes your current occupation?
 =======
