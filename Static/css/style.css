@@ -1,0 +1,9 @@
+body {
+
+    color: #eafcfd;
+}
+
+.jumbotron {
+  background-image: url("../images/bed_banner.jpeg");
+  text-align: center;
+}
