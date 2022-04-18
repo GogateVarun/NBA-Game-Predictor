@@ -4,12 +4,11 @@
 	<meta charset="UTF-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Sleep Status</title>
+	<title>Sleep Style Predictor</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="static/css/style.css" rel="stylesheet">
 </head>
 <body>
-	<div class="wrapper"></div>
 	<nav class="navbar navbar-expand-lg navbar-light bg-info">
 		<a class="navbar-brand" href="index.html">
 		<h2>Team 3</h2></a> <button aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarTogglertest" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
@@ -31,20 +30,20 @@
 		</div>
 	</nav>
 	<div class="jumbotron">
-		<h1 class="mb-3">Predicting Partner Sleep Preferences</h1>
-		<h4 class="mb-3">How will you sleep in your next relationship?</h4>
+		<h1 class="mb-3 strokeme">Predicting Sleep-Partner Preferences</h1>
+		<h4 class="mb-3 strokeme">How will you sleep in your next relationship?</h4>
 	</div>
-    <div class="container-fluid">
-        <div class="p-3 mb-2 bg-info text-white">
+    <div class="container-fluid" style="padding:10px;margin:0">
+        <div class="p-2 mb-4 bg-info text-white">
             <div class="row">
                 <div class="col-md-4">
-                <h2>How Can Couple Sleeping Habits Affect Your Life?<br><small>Scientists and medical professionals weigh in...</small></h2>
+                <h2>How Can Couple Sleeping Habits Affect Your Life?<br><small>Scientists and Medical Professionals weigh in...</small></h2>
                 </div>
                 <div class="col-md-8">
                 <p>
                     <ul>
                         <li>Millions of adults around the world share their beds with a partner. This may be an expression of intimacy and attachment and tends to intensify romantic relationships.</li>
-                        <li>Yet, couple sleeping still has underestimated implications for the quality of the relationship, quality of sleep and for physical and psychological health which are not consistently positive.</li>
+                        <li>Couple sleeping still has underestimated implications for the quality of the relationship, quality of sleep and for physical and psychological health which are not consistently positive.</li>
                         <li>Despite the people involved perhaps not even being aware of their nocturnal interactions, it is important that sleeping together becomes a subject of discussion.</li>
                     </ul>
                     <p style="text-align:right;">
@@ -55,5 +54,143 @@
             </div>
         </div>
     </div>
+	<div class="container-fluid">
+        <div class="row">
+            <div class="col-md-3 bg-info text-white">
+                <form class="bg-info">
+                    <p><center><strong>Predict your sleep-partner preference by choosing the responses below that best describe yourself...</strong></center></p>
+                </form>
+                <ul class="list-group bg-info">
+                    <!-- Gender -->
+                    <li class="list-group-item bg-info">
+                        <label for="gender">Please select your <u>Gender</u> from the dropdown menu below:</label>
+						<select id="gender" name="gender">
+							<option value="">
+							</option>
+							<option value="Female">
+								Female
+							</option>
+							<option value="Male">
+								Male
+							</option>
+						</select>
+                    </li>
+                    <!-- Age -->
+                    <li class="list-group-item bg-info">
+                        <label for="age">Please select your <u>Age</u> using the ranges provided in the dropdown menu below:</label>
+						<select id="age" name="age">
+							<option value="">
+							</option>
+							<option value="18-29">
+								18-29
+							</option>
+							<option value="30-44">
+								30-44
+							</option>
+							<option value="45-60">
+								45-60
+							</option>
+							<option value=">60">
+								>60
+							</option>
+						</select>
+                    </li>
+                    <!-- Household Income -->
+                    <li class="list-group-item bg-info">
+                        <label for="income">Please select your <u>Household Income</u> using the ranges provided in the dropdown menu below:</label>
+						<select id="income" name="income">
+							<option value="">
+							</option>
+							<option value="$0-$24,999">
+								$0-$24,999
+							</option>
+							<option value="$25,000-$49,999">
+								$25,000-$49,999
+							</option>
+							<option value="$50,000-$99,999">
+								$50,000-$99,999
+							</option>
+							<option value="$100,000-$149,999">
+								$100,000-$149,999
+							</option>
+							<option value="$150,000+">
+								$150,000+
+							</option>
+						</select>
+                    </li>
+                    <!-- Education Level -->
+                    <li class="list-group-item bg-info">
+                        <label for="education">Please select your <u>Highest Education Level</u> from the options provided in the dropdown menu below:</label>
+						<select id="education" name="education">
+							<option value="">
+							</option>
+							<option value="Less than high school degree">
+								Less than high school degree
+							</option>
+							<option value="High school degree">
+								High school degree
+							</option>
+							<option value="Some college or Associate degree">
+								Some college or Associate degree
+							</option>
+							<option value="Bachelor degree">
+								Bachelor degree
+							</option>
+							<option value="Graduate degree">
+								Graduate degree
+							</option>
+						</select>
+                    </li>
+                    <!-- Location -->
+                    <li class="list-group-item bg-info">
+                        <label for="location">Please select the <u>U.S. Geographical Region</u> that best describes your home's location from the options provided in the dropdown menu below:</label>
+						<select id="location" name="location">
+							<option value="">
+							</option>
+							<option value="East South Central">
+								East South Central
+							</option>
+							<option value="East North Central">
+								East North Central
+							</option>
+							<option value="West South Central">
+								West South Central
+							</option>
+							<option value="West North Central">
+								West North Central
+							</option>
+							<option value="New England">
+								New England
+							</option>
+							<option value="Middle Atlantic">
+								Middle Atlantic
+							</option>
+							<option value="South Atlantic">
+								South Atlantic
+							</option>
+							<option value="Pacific">
+								Pacific
+							</option>
+							<option value="Mountain">
+								Mountain
+							</option>
+						</select>
+                    </li>
+                </ul>
+            </div>
+        	<div class="col-md-9 bg-info text-white">
+				<!-- This is where we'll insert the visuals of the output -->
+			</div>
+		</div>
+	</div>
+	<script src="static/js/app.js"></script>
+	<footer class="container-fluid bg-info text-center text-white" style="padding:0;margin:0"><br><br><br><br>
+		<p><strong>Team 3 would love your feedback</strong><br>Click a team member's name below to contact them directly<br></p>
+			<a href="mailto:strowers2018@gmail.com" title="Sakile's email"><b>Sakile</b></a>&emsp;&emsp;
+			<a href="mailto:szeilstra@gmail.com" title="Sharon's email"><b>Sharon</b></a>&emsp;&emsp;
+			<a href="mailto:kwnmsc7@gmail.com" title="Kit's email"><b>Kit</b></a>&emsp;&emsp;
+			<a href="mailto:gogatevarun@gmail.com" title="Varun's email"><b>Varun</b></a>&emsp;&emsp;
+			<a href="mailto:zach.mehlenbacher@gmail.com" title="Zach's email"><b>Zach</b></a>
+	</footer>
 </body>
 </html>
