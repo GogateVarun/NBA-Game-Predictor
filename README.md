@@ -1,40 +1,31 @@
 # Team-3-Project
 
-<<<<<<< HEAD
-Overview of Dataset selection
+Our group is attempting to create an algorithm that can be used to preidct your sleep-partner patterns. By prompting for user inputs of gender, age, household income, education level, and geopgraphic location, the algorithm will determine how often someone will sleep alone in their next relationship.
 
-Sleep Alone Dataset - category questions
-
-Which of the following best describes your current relationship status?
-
-How long have you been in your current relationship? If you are not currently in a relationship, please answer according to your last relationship.
-
-When both you and your partner are at home, how often do you sleep in separate beds?
-
-When you're not sleeping in the same bed as your partner, where do you typically sleep?
-
-When you're not sleeping in the same bed, where does your partner typically sleep?
-
-What are the reasons that you sleep in separate beds? Please select all that apply.
-
-When was the first time you slept in separate beds?
-
-To what extent do you agree with the following statement: "sleeping in separate beds helps us to stay together."
-
-To what extent do you agree with the following statement: "we sleep better when we sleep in separate beds."
-
-To what extent do you agree with the following statement:ë_"our sex life has improved as a result of sleeping in separate beds."
-
-Which of the following best describes your current occupation?
-=======
 ## Members
 - Varun Gogate - Repo, Vis, 
 - Kit Williams - Machine Learning
 - Sakile Trowers - SQL, Database
 - Sharon Zeilstra - Machine Learning, Vis
-- Zach Mehlenbacher - SQL, Database, Vis
+- Zach Mehlenbacher - SQL, Python, Database, Vis
+
+## Communication Plan
+
+Members have agreed to utilize all methods available. This includes our group's Slack channel, our email addresses, Zoom, Google Meet, and class time. In order to stay updated on the status of each of our parts of the project, we message each other regularly through Slack and zoom meetings.
 
 ## Overview
 
-Currently researching data sources and available data to narrow down project topic. Will return by Thursday with suggestions for the group and final decisions.
->>>>>>> ce014e82c34333e53b639631b734517bd372a4e0
+Project Question: Can demographic information be used to predict sleep-partner patterns?
+
+## Resources
+
+Our dataset was discovered through [data.world](https://data.world/fivethirtyeight/sleeping-alone-data/workspace/file?filename=sleeping-alone-data.csv). In it's original state, the data contains 1,094 rows with 31 fields. Using the "Sleep-Alone-Data", we will reduce fields significantly from 31 to 8, keeping the demographic data in the final fields, as well as, the field regarding how often partners sleep in separate beds. Using the demographic data, we will develop a Machine Learning algorithm that can hopefully predict how often someone will sleep alone in their next relationship.
+
+## Storyboard/Next Steps
+
+Currently have located a dataset and generated a question to attempt to answer.
+Next Steps include:
+- Cleaning the dataset using Python and Pandas to filter out empty rows and unnecessary columns
+- Exploring PostgreSQL database structure for housing data and tracking log of user inputs
+- Beginning to develop Machine Learning algorithm
+- Continue to build dashboard framework as analysis and model take shape

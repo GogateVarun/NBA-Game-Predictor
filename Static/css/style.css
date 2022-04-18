@@ -3,12 +3,34 @@
     text-shadow: -1px 0px 0 #000, 0px 1px 0 #000, 1px 0px 0 #000, 0px -1px 0 #000;
   }
 
+#gender{
+    width:375px;   
+  }
+
+#age{
+    width:375px;   
+  }
+
+#income{
+    width:375px;   
+  }
+
+#education{
+    width:375px;   
+  }
+
+#location{
+    width:375px;   
+  }
+
 body {
 
     color: #eafcfd;
-}
+  }
+
+a { color: inherit; } 
 
 .jumbotron {
   background-image: url("../images/bed_banner.jpeg");
   text-align: center;
-}
+  }
