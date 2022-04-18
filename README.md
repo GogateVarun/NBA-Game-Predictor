@@ -1,6 +1,5 @@
 # Team-3-Project
 
-<<<<<<< HEAD
 Overview of Dataset selection
 
 Sleep Alone Dataset - category questions
@@ -26,7 +25,7 @@ To what extent do you agree with the following statement: "we sleep better when 
 To what extent do you agree with the following statement:ë_"our sex life has improved as a result of sleeping in separate beds."
 
 Which of the following best describes your current occupation?
-=======
+
 ## Members
 - Varun Gogate - Repo, Vis, 
 - Kit Williams - Machine Learning
@@ -37,4 +36,4 @@ Which of the following best describes your current occupation?
 ## Overview
 
 Currently researching data sources and available data to narrow down project topic. Will return by Thursday with suggestions for the group and final decisions.
->>>>>>> ce014e82c34333e53b639631b734517bd372a4e0
+
