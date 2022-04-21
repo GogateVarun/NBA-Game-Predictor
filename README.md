@@ -22,7 +22,8 @@ Before 4/21 class, we need to find a different database to work with and make so
 
 # Team-3-Project
 
-Our group is attempting to create an algorithm that can be used to preidct your sleep-partner patterns. By prompting for user inputs of gender, age, household income, education level, and geopgraphic location, the algorithm will determine how often someone will sleep alone in their next relationship.
+Update for 4/21: A new NBA Odds dataset has been selected and we are reviewing if this dataset will be adequate for the focus of our analysis.  
+Dataset has been downloaded in multiple formats and cleaned thus far.  The focus for this analysis will be to use inputs to detemine the accuracy of NBA sportsbetting odds and scores. 
 
 ## Members
 - Varun Gogate - Repo, Vis, 
@@ -37,11 +38,13 @@ Members have agreed to utilize all methods available. This includes our group's 
 
 ## Overview
 
-Project Question: Can demographic information be used to predict sleep-partner patterns?
+Project Question: Can Vegas odds and historical scores amongst all NBA teams be used to detemine the accuracy of sports betting webistes, such as their money line or game score spreads?
 
 ## Resources
 
-Our dataset was discovered through [data.world](https://data.world/fivethirtyeight/sleeping-alone-data/workspace/file?filename=sleeping-alone-data.csv). In it's original state, the data contains 1,094 rows with 31 fields. Using the "Sleep-Alone-Data", we will reduce fields significantly from 31 to 8, keeping the demographic data in the final fields, as well as, the field regarding how often partners sleep in separate beds. Using the demographic data, we will develop a Machine Learning algorithm that can hopefully predict how often someone will sleep alone in their next relationship.
+Our dataset was discovered through Kaggle, https://www.kaggle.com/datasets/erichqiu/nba-odds-and-scores.
+
+The data has been cleaned and prepped for database analysis and machine learning.
 
 ## Storyboard/Next Steps
 
