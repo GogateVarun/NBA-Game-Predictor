@@ -4,12 +4,12 @@
 	<meta charset="UTF-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Sleep Style Predictor</title>
+	<title>NBA Betting Probability</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 	<link href="static/css/style.css" rel="stylesheet">
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-info">
+	<nav class="navbar navbar-expand-lg navbar-secondary bg-primary">
 		<a class="navbar-brand" href="index.html">
 		<h2>Team 3</h2></a> <button aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarTogglertest" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarTogglertest">
@@ -24,17 +24,22 @@
 					<a class="nav-link" href="/resources.html">Resources</a>
 				</li>
 			</ul>
-			<form class="form-inline my-2 my-lg-0">
-				<input class="form-control mr-sm-2" placeholder="Search" type="search"> <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
-			</form>
 		</div>
 	</nav>
-	<div class="jumbotron">
-		<h1 class="mb-3 strokeme">Predicting Sleep-Partner Preferences</h1>
-		<h4 class="mb-3 strokeme">How will you sleep in your next relationship?</h4>
+	<div class="jumbotron" style="padding:50px;margin:0">
+		<h1 class="mb-3 textformat">NBA Betting Probability</h1>
+		<h3 class="mb-3 textformat">How accurate are the odds?</h3>
+		<br>
+		<br>
+		<h5 class="mb-3 textformat">Using 2018-2019 NBA<br>Game Data to Predict Probability<br>of Future Bet Accuracy</h5>
 	</div>
-    <div class="container-fluid" style="padding:10px;margin:0">
-        <div class="p-2 mb-4 bg-info text-white">
+	<div class="container-fluid">
+		<div class="row">
+			<br>
+		</div>
+	</div>
+    <div class="container-fluid" style="padding:0px;margin:0">
+        <div class="p-2 mb-4 bg-danger text-white">
             <div class="row">
                 <div class="col-md-4">
                 <h2>How Can Couple Sleeping Habits Affect Your Life?<br><small>Scientists and Medical Professionals weigh in...</small></h2>
@@ -56,13 +61,13 @@
     </div>
 	<div class="container-fluid">
         <div class="row">
-            <div class="col-md-3 bg-info text-white">
-                <form class="bg-info">
+            <div class="col-md-3 bg-white text-white">
+                <form class="bg-white text-dark">
                     <p><center><strong>Predict your sleep-partner preference by choosing the responses below that best describe yourself...</strong></center></p>
                 </form>
-                <ul class="list-group bg-info">
+                <ul class="list-group">
                     <!-- Gender -->
-                    <li class="list-group-item bg-info">
+                    <li class="list-group-item bg-warning text-dark">
                         <label for="gender">Please select your <u>Gender</u> from the dropdown menu below:</label>
 						<select id="gender" name="gender">
 							<option value="">
@@ -76,7 +81,7 @@
 						</select>
                     </li>
                     <!-- Age -->
-                    <li class="list-group-item bg-info">
+                    <li class="list-group-item bg-warning text-dark">
                         <label for="age">Please select your <u>Age</u> using the ranges provided in the dropdown menu below:</label>
 						<select id="age" name="age">
 							<option value="">
@@ -96,7 +101,7 @@
 						</select>
                     </li>
                     <!-- Household Income -->
-                    <li class="list-group-item bg-info">
+                    <li class="list-group-item bg-warning text-dark">
                         <label for="income">Please select your <u>Household Income</u> using the ranges provided in the dropdown menu below:</label>
 						<select id="income" name="income">
 							<option value="">
@@ -119,7 +124,7 @@
 						</select>
                     </li>
                     <!-- Education Level -->
-                    <li class="list-group-item bg-info">
+                    <li class="list-group-item bg-warning text-dark">
                         <label for="education">Please select your <u>Highest Education Level</u> from the options provided in the dropdown menu below:</label>
 						<select id="education" name="education">
 							<option value="">
@@ -142,7 +147,7 @@
 						</select>
                     </li>
                     <!-- Location -->
-                    <li class="list-group-item bg-info">
+                    <li class="list-group-item bg-warning text-dark">
                         <label for="location">Please select the <u>U.S. Geographical Region</u> that best describes your home's location from the options provided in the dropdown menu below:</label>
 						<select id="location" name="location">
 							<option value="">
@@ -178,13 +183,25 @@
                     </li>
                 </ul>
             </div>
-        	<div class="col-md-9 bg-info text-white">
-				<!-- This is where we'll insert the visuals of the output -->
+			<!-- This is where we'll insert the visuals of the output -->
+			<div class="col-md-3 bg-success">
+				<!-- This is where we'll insert MoneyLine gauge -->
+			</div>
+			<div class="col-md-3 bg-success">
+				<!-- This is where we'll insert Spread gauge -->
+			</div>
+			<div class="col-md-3 bg-success">
+				<!-- This is where we'll insert Over/Under gauge -->
 			</div>
 		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<br>
+			</div>
+		</div>	
 	</div>
 	<script src="static/js/app.js"></script>
-	<footer class="container-fluid bg-info text-center text-white" style="padding:0;margin:0"><br><br><br><br>
+	<footer class="container-fluid bg-primary text-center text-white" style="padding:0;margin:0"><br><br>
 		<p><strong>Team 3 would love your feedback</strong><br>Click a team member's name below to contact them directly<br></p>
 			<a href="mailto:strowers2018@gmail.com" title="Sakile's email"><b>Sakile</b></a>&emsp;&emsp;
 			<a href="mailto:szeilstra@gmail.com" title="Sharon's email"><b>Sharon</b></a>&emsp;&emsp;
