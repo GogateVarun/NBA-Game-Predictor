@@ -55,3 +55,51 @@ Next Steps include:
 - Beginning to develop Machine Learning algorithm
 - Continue to build dashboard framework as analysis and model take shape
 
+# Final Project - Segment 2 
+
+## Part 1 GitHub
+•	All deliverable requirements for this section have been met in the current README from the previous submission
+
+## Part 2 - Machine Learning
+Our goal is to predict 3 metrics from sports betting:
+•	MoneyLine
+•	Spread
+•	Over/Under
+
+There are 3 different models being used to predict each of the metrics outlined above.
+
+Description of Preliminary Preprocessing
+
+General data cleaning was needed to reduce the complexity and dimensions of the data set. Unnecessary columns were removed, and it was ensured that every column was the correct data type. As we planned on using a binary classifier, one target column for each prediction was calculated, resulting in a total of three columns. The value was either 1 (indicating correct) or 0 (indicating incorrect). These columns for the target variables were added to the end of our DataFrame. 
+
+Once the data was cleaned, we completed a process of feature selection. This method was used to determine which variables contributed to an accurate prediction of our target variable. With the features selected, some final preprocessing occurred before fitting our model. Categorical variables were then converted to numeric. 
+
+## Part 3 - Database
+
+Key points and Features:
+•	Database connection to ML model --> PyMongo will be utilized to connect our DB to our Python ML Model.
+•	User Input and DB connectivity --> An input table was created to store selections and connected through an app.py file.
+•	Advantages of using MongoD: Ease of connectivity through PyMongo and set up | Data accessibility through web-based Atlas application
+
+## Part 4 - Presentation
+
+Google Slides and general outline for Presentation can be found here:
+
+https://docs.google.com/presentation/d/1pg1xgsjBsOmQrMdxlT2wFP6VxVbv49QSj2FkXTKnR-k/edit?usp=sharing
+
+## Part 5 - Dashboard
+
+Blueprint:
+•	Storyboard on Google Slide(s)
+o	Please see the “Dashboard section of the Google Slides presentation outline.
+•	Description of the tool(s) that will be used to create final dashboard (ReadMe)
+o	Using Plotly to create gauges
+o	Using index.html with associated javascript and static resources
+o	Using app.py to create function interactivity for user inputs
+•	Description of interactive elements
+o	User inputs (7), text boxes
+o	Resources/Links
+o	Contact information links
+o	Help button
+o	Page refresh button
+
