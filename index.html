@@ -63,135 +63,59 @@
         <div class="row">
             <div class="col-md-3 bg-white text-white">
                 <form class="bg-white text-dark">
-                    <p><center><strong>Predict your sleep-partner preference by choosing the responses below that best describe yourself...</strong></center></p>
+                    <p><center><strong>Using the fields below, input current NBA game bets, matching the provided example's formatting, and see the probability of today's bets being associated with a win.</strong></center></p>
                 </form>
                 <ul class="list-group">
-                    <!-- Gender -->
+                    <!-- Home/Away -->
                     <li class="list-group-item bg-warning text-dark">
-                        <label for="gender">Please select your <u>Gender</u> from the dropdown menu below:</label>
-						<select id="gender" name="gender">
-							<option value="">
-							</option>
-							<option value="Female">
-								Female
-							</option>
-							<option value="Male">
-								Male
-							</option>
-						</select>
+                        <label for="home_away">Is the Team Home or Away?</label>
+						<input type="text" class="form-control" placeholder="Home" id="home_away" />
                     </li>
-                    <!-- Age -->
+                    <!-- % Bet on the Moneyline -->
                     <li class="list-group-item bg-warning text-dark">
-                        <label for="age">Please select your <u>Age</u> using the ranges provided in the dropdown menu below:</label>
-						<select id="age" name="age">
-							<option value="">
-							</option>
-							<option value="18-29">
-								18-29
-							</option>
-							<option value="30-44">
-								30-44
-							</option>
-							<option value="45-60">
-								45-60
-							</option>
-							<option value=">60">
-								>60
-							</option>
-						</select>
+                        <label for="bet_ml">% Bet on the Moneyline</label>
+						<input type="text" class="form-control" placeholder="50.0" id="bet_ml" />
                     </li>
-                    <!-- Household Income -->
+                    <!-- Value of the Moneyline -->
                     <li class="list-group-item bg-warning text-dark">
-                        <label for="income">Please select your <u>Household Income</u> using the ranges provided in the dropdown menu below:</label>
-						<select id="income" name="income">
-							<option value="">
-							</option>
-							<option value="$0-$24,999">
-								$0-$24,999
-							</option>
-							<option value="$25,000-$49,999">
-								$25,000-$49,999
-							</option>
-							<option value="$50,000-$99,999">
-								$50,000-$99,999
-							</option>
-							<option value="$100,000-$149,999">
-								$100,000-$149,999
-							</option>
-							<option value="$150,000+">
-								$150,000+
-							</option>
-						</select>
+                        <label for="value_ml">Value of the Moneyline</label>
+						<input type="text" class="form-control" placeholder="100.0" id="value_ml" />
                     </li>
-                    <!-- Education Level -->
+                    <!-- % Bet on Spread -->
                     <li class="list-group-item bg-warning text-dark">
-                        <label for="education">Please select your <u>Highest Education Level</u> from the options provided in the dropdown menu below:</label>
-						<select id="education" name="education">
-							<option value="">
-							</option>
-							<option value="Less than high school degree">
-								Less than high school degree
-							</option>
-							<option value="High school degree">
-								High school degree
-							</option>
-							<option value="Some college or Associate degree">
-								Some college or Associate degree
-							</option>
-							<option value="Bachelor degree">
-								Bachelor degree
-							</option>
-							<option value="Graduate degree">
-								Graduate degree
-							</option>
-						</select>
+                        <label for="bet_spread">% Bet on Spread</label>
+						<input type="text" class="form-control" placeholder="50.0" id="bet_spread" />
                     </li>
-                    <!-- Location -->
+                    <!-- Value of the Spread -->
                     <li class="list-group-item bg-warning text-dark">
-                        <label for="location">Please select the <u>U.S. Geographical Region</u> that best describes your home's location from the options provided in the dropdown menu below:</label>
-						<select id="location" name="location">
-							<option value="">
-							</option>
-							<option value="East South Central">
-								East South Central
-							</option>
-							<option value="East North Central">
-								East North Central
-							</option>
-							<option value="West South Central">
-								West South Central
-							</option>
-							<option value="West North Central">
-								West North Central
-							</option>
-							<option value="New England">
-								New England
-							</option>
-							<option value="Middle Atlantic">
-								Middle Atlantic
-							</option>
-							<option value="South Atlantic">
-								South Atlantic
-							</option>
-							<option value="Pacific">
-								Pacific
-							</option>
-							<option value="Mountain">
-								Mountain
-							</option>
-						</select>
+                        <label for="value_spread">Value of the Spread</label>
+						<input type="text" class="form-control" placeholder="10.0" id="value_spread" />
                     </li>
+					<!-- % Bet on Over/Under -->
+                    <li class="list-group-item bg-warning text-dark">
+                        <label for="bet_ou">% Bet on Over/Under</label>
+						<input type="text" class="form-control" placeholder="50.0" id="bet_ou" />
+                    </li>
+                    <!-- Value of the Over/Under -->
+                    <li class="list-group-item bg-warning text-dark">
+                        <label for="value_ou">Value of the Over/Under</label>
+						<input type="text" class="form-control" placeholder="200.0" id="value_ou" />
+                    </li>
+					<button type="submit" class="btn btn-success">Submit</button>
                 </ul>
             </div>
 			<!-- This is where we'll insert the visuals of the output -->
-			<div class="col-md-3 bg-success">
+			<div class="col-md-3 bg-dark">
 				<!-- This is where we'll insert MoneyLine gauge -->
+				<div id="gauge_ml"></div>
 			</div>
-			<div class="col-md-3 bg-success">
+			<div class="col-md-3 bg-dark">
 				<!-- This is where we'll insert Spread gauge -->
+				<div id="gauge_spread"></div>
 			</div>
-			<div class="col-md-3 bg-success">
+			<div class="col-md-3 bg-dark">
 				<!-- This is where we'll insert Over/Under gauge -->
+				<div id="gauge_ou"></div>
 			</div>
 		</div>
 		<div class="container-fluid">
@@ -200,11 +124,13 @@
 			</div>
 		</div>	
 	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="static/js/charts.js"></script>
 	<script src="static/js/app.js"></script>
 	<footer class="container-fluid bg-primary text-center text-white" style="padding:0;margin:0"><br><br>
 		<p><strong>Team 3 would love your feedback</strong><br>Click a team member's name below to contact them directly<br></p>
 			<a href="mailto:strowers2018@gmail.com" title="Sakile's email"><b>Sakile</b></a>&emsp;&emsp;
-			<a href="mailto:szeilstra@gmail.com" title="Sharon's email"><b>Sharon</b></a>&emsp;&emsp;
 			<a href="mailto:kwnmsc7@gmail.com" title="Kit's email"><b>Kit</b></a>&emsp;&emsp;
 			<a href="mailto:gogatevarun@gmail.com" title="Varun's email"><b>Varun</b></a>&emsp;&emsp;
 			<a href="mailto:zach.mehlenbacher@gmail.com" title="Zach's email"><b>Zach</b></a>
