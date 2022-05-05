@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Test Connections</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<a type="refresh" class="btn btn-success" href="/">Refresh Page</a>
+		</div>
+	</div>
+    <div class="container-fluid">
+		<div class="row">
+			<ul class="list-group">
+				<li class="list-group-item bg-warning text-dark">
+					<label for="value_ou">Value of the Over/Under</label>
+					<input type="text" class="form-control" placeholder="200.0" id="value_ou" />
+				</li>
+				<a type="submit" class="btn btn-success" href="/submit">Submit</a>
+			</ul>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script src="charts.js"></script>
+</body>
+</html>
