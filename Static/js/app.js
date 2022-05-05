@@ -71,7 +71,7 @@ function createUserInputRow() {
   }
   
   // 2. Attach an event to listen for changes to each filter
-  d3.selectAll("input").on("click", createUserInputRow);
+  d3.selectAll("submit").on("click", createUserInputRow);
   
   // Build the table when the page loads
   buildTable(tableData);
