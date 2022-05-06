@@ -1,6 +1,8 @@
 from flask import Flask, render_template, redirect, url_for, request
 #from flask_pymongo import PyMongo
 import pymongo
+import UserInputCleaning
+import ML
 
 
 app = Flask(__name__)
@@ -21,17 +23,42 @@ def index():
 @app.route("/submit", methods=['GET','POST'])
 def submit():
 
-    print('Heres the Dictionary')
-    print(request.args.to_dict())
-    #print(input1)
+    print('Grabing Data...')
+    #user_inputs = request.args.to_dict()
+    home_away_input = request.args.get('home_away')
+    bet_ml_input = request.args.get('bet_ml')
+    value_ml_input = request.args.get('value_ml')
+    bet_spread_input = request.args.get('bet_spread')
+    value_spread_input = request.args.get('value_spread')
+    bet_ou_input = request.args.get('bet_ou')
+    value_ou_input = request.args.get('value_ou')
+
+    user_inputs = {
+        'home_away': home_away_input,
+        'bet_ml': bet_ml_input,
+        'value_ml': value_ml_input,
+        'bet_spread': bet_spread_input,
+        'value_spread':value_spread_input,
+        'bet_ou': bet_ou_input,
+        'value_ou': value_ou_input
+    }
+  
     # this "Test" below is what created the test collection within the "Test" database created above in ln 15
     collection = db.get_collection('Test')
-    collection.insert_many([request.args.to_dict()])
-
+    collection.insert_many([user_inputs])
+    clean_user_inputs = UserInputCleaning.clean_inputs(user_inputs)
 
     #request.args.get('Key Name')
     #request.args.to_dict()
     #print(request.args.to_dict())
+
+    for keys,values in enumerate(clean_user_inputs):
+        print(values)
+        print(type(values))
+
+
+    #output = ML.run_models(clean_user_inputs)
+    #print(output)
 
     return 'what goes here'
 
