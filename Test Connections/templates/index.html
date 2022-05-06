@@ -20,12 +20,15 @@
 					<label for="value_ou">Value of the Over/Under</label>
 					<input type="text" class="form-control" placeholder="200.0" id="value_ou" />
 				</li>
-				<a type="submit" class="btn btn-success" href="/submit">Submit</a>
+				<a type="submit" class="btn btn-success" id="submit_button">Submit </a>
 			</ul>
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
 	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-	<script src="charts.js"></script>
+	<!-- <script src="static/js/app.js"></script> -->
+	<!-- <script src="static/js/charts.js"></script> -->
+	<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script> -->
+  	<script type="text/javascript" src="{{ url_for('static', filename='js/charts.js') }}"></script> -->
 </body>
 </html>

@@ -1,5 +1,6 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, request
 from flask_pymongo import PyMongo
+
 
 app = Flask(__name__)
 
@@ -11,9 +12,11 @@ app = Flask(__name__)
 def index():
     return render_template("index.html")
 
-@app.route("/submit")
+@app.route("/submit", methods=['GET','POST'])
 def submit():
-    return "<p>Button Works!</p>"
+    #request.args.get('home_team')
+    print(request.args.to_dict())
+    return {"test"}
 
 if __name__ == "__main__":
    app.run()
