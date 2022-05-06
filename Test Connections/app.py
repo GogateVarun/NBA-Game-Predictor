@@ -42,6 +42,8 @@ def submit():
         'bet_ou': bet_ou_input,
         'value_ou': value_ou_input
     }
+
+    user_inputs = dict(user_inputs)
   
     # this "Test" below is what created the test collection within the "Test" database created above in ln 15
     collection = db.get_collection('Test')
@@ -51,10 +53,6 @@ def submit():
     #request.args.get('Key Name')
     #request.args.to_dict()
     #print(request.args.to_dict())
-
-    for keys,values in enumerate(clean_user_inputs):
-        print(values)
-        print(type(values))
 
 
     #output = ML.run_models(clean_user_inputs)

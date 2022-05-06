@@ -19,4 +19,11 @@ def clean_inputs(input_dict):
         input_dict['home'] = 0
         input_dict['away'] = 1
     
+
+
+    for keys,values in enumerate(input_dict):
+        print(keys)
+        print(values)
+        print(type(values))
+    
     return input_dict 
