@@ -1,10 +1,12 @@
-
-var inputs = {};
-
 function grabInputs(){
-    var input_values = d3.select("input");
-    console.log(input_values)
-    d3.json("http://127.0.0.1:5000/submit?Test1=Hello&Test2=Guys").then(data => console.log(data));
+    home_away_input = document.getElementById('home_away').value
+    bet_ml_input = document.getElementById('bet_ml').value
+    value_ml_input = document.getElementById('value_ml').value
+    bet_spread_input = document.getElementById('bet_spread').value
+    value_spread_input = document.getElementById('value_spread').value
+    bet_ou_input = document.getElementById('bet_ou').value
+    value_ou_input = document.getElementById('value_ou').value
+    d3.json("http://127.0.0.1:5000/submit?home_away=" + home_away_input + "&bet_ml=" + bet_ml_input + "&value_ml=" + value_ml_input + "&bet_spread=" + bet_spread_input + "&value_spread=" + value_spread_input + "&bet_ou=" + bet_ou_input + "&value_ou=" + value_ou_input),then(data => console.log(data));
 
 }
 
@@ -13,7 +15,3 @@ d3.select("#submit_button").on("click",grabInputs);
 
 
 console.log('Hi')
-
-//var grabingInputs = d3.selectAll("input");
-//localURL = "http://127.0.0.1:5000/submit";
-//3.json(localURL).then(data => console.log(data));
