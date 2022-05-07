@@ -1,3 +1,5 @@
+// The function below should be transferable to our built out app.js with same info
+
 function grabInputs(){
     home_away_input = document.getElementById('home_away').value
     bet_ml_input = document.getElementById('bet_ml').value

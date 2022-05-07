@@ -5,6 +5,7 @@ import UserInputCleaning
 import ML
 
 
+
 app = Flask(__name__)
 
 # Use flask_pymongo to set up mongo connection
@@ -23,7 +24,7 @@ def index():
 @app.route("/submit", methods=['GET','POST'])
 def submit():
 
-    print('Grabing Data...')
+    print('Grabbing Data...')
     #user_inputs = request.args.to_dict()
     home_away_input = request.args.get('home_away')
     bet_ml_input = request.args.get('bet_ml')
@@ -49,6 +50,8 @@ def submit():
     collection = db.get_collection('Test')
     collection.insert_many([user_inputs])
     clean_user_inputs = UserInputCleaning.clean_inputs(user_inputs)
+
+    # clean_user_inputs defined and working so need to put ML next?
 
     #request.args.get('Key Name')
     #request.args.to_dict()
