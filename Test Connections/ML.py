@@ -1,4 +1,20 @@
 def run_models(input_dict):
-    for key,value in enumerate(input_dict):
-        print(f'Key={key}:Value={value}')
+
+    # To confirm the ML has the correct inputs 
+    values = input_dict.values()
+    print(values)
+    print(type(values))
+
+    for value in values:
+        print(type(value))
+
+    keys = input_dict.keys()
+    print(keys)
+    print(type(keys))
+    # 
+
+
+
+    
+
     return 'The 3 outputs'

@@ -58,8 +58,8 @@ def submit():
     #print(request.args.to_dict())
 
 
-    #output = ML.run_models(clean_user_inputs)
-    #print(output)
+    output = ML.run_models(clean_user_inputs)
+    print(output)
 
     return 'what goes here'
 
