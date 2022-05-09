@@ -8,7 +8,7 @@ function grabInputs(){
     value_spread_input = document.getElementById('value_spread').value
     bet_ou_input = document.getElementById('bet_ou').value
     value_ou_input = document.getElementById('value_ou').value
-    d3.json("http://127.0.0.1:5000/submit?home_away=" + home_away_input + "&bet_ml=" + bet_ml_input + "&value_ml=" + value_ml_input + "&bet_spread=" + bet_spread_input + "&value_spread=" + value_spread_input + "&bet_ou=" + bet_ou_input + "&value_ou=" + value_ou_input),then(data => console.log(data));
+    d3.json("http://127.0.0.1:5000/submit?home_away=" + home_away_input + "&bet_ml=" + bet_ml_input + "&value_ml=" + value_ml_input + "&bet_spread=" + bet_spread_input + "&value_spread=" + value_spread_input + "&bet_ou=" + bet_ou_input + "&value_ou=" + value_ou_input).then(data => console.log(data));
 
 }
 
