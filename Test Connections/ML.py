@@ -26,30 +26,33 @@ def run_models(input_dict):
     print(model_input)
 
     ML_model = tf.keras.models.load_model('nn_model_ML.h5')
-    #spread_model = tf.keras.models.load_model('nn_model_spread.h5') 
-    #OU_model = tf.keras.models.load_model('nn_model_OU.h5')
+    spread_model = tf.keras.models.load_model('nn_model_spread.h5') 
+    OU_model = tf.keras.models.load_model('nn_model_OU.h5')
 
     ML_scaler = pickle.load(open('scaler_ML.pkl','rb'))
-    #spread_scaler = pickle.load(open('scaler_spread.pkl','rb'))
-    #OU_scaler = pickle.load(open('scaler_OU.pkl','rb'))
+    spread_scaler = pickle.load(open('scaler_spread.pkl','rb'))
+    OU_scaler = pickle.load(open('scaler_OU.pkl','rb'))
 
     ML_scaled = ML_scaler.transform(model_input)
-    #spread_scaled = spread_scaler.transform(#)
-    #OU_scaled = OU_scaler.transform(#)
+    spread_scaled = spread_scaler.transform(model_input)
+    OU_scaled = OU_scaler.transform(model_input)
 
 
   
     print("HERE IS THE ML MODEL'S PREDICTION....")
     ML_prediction = ML_model.predict(ML_scaled)
-    print(ML_prediction)
+    ML_output = str(ML_prediction[0][0])
+    print(ML_output)
 
-    #print("HERE IS THE SPREAD MODEL'S PREDICTION....")
-    #spread_prediction = spread_model.predict(#model_input)
-    #print(spread_prediction)
+    print("HERE IS THE SPREAD MODEL'S PREDICTION....")
+    spread_prediction = spread_model.predict(spread_scaled)
+    spread_output = str(spread_prediction[0][0])
+    print(spread_output)
 
-    #print("HERE IS THE OU MODEL'S PREDICTION....")
-    #OU_prediction = OU_model.predict(#model_input)
-    #print(OU_prediction)
+    print("HERE IS THE OU MODEL'S PREDICTION....")
+    OU_prediction = OU_model.predict(OU_scaled)
+    OU_output = str(OU_prediction[0][0])
+    print(OU_output)
 
 
     # TO-DO...
@@ -76,4 +79,4 @@ def run_models(input_dict):
 
     # Presentation stuff 
 
-    return ML_prediction[0][0]
+    return {'ML_Output':ML_output,'Spread_Output':spread_output,'OU_Output':OU_output}

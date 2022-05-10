@@ -64,7 +64,7 @@ def submit():
 
     output = ML.run_models(clean_user_inputs)
 
-    return {'Output':str(output)}
+    return output
 
 if __name__ == "__main__":
    app.run()
