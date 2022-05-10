@@ -1,5 +1,6 @@
 import tensorflow as tf
 import numpy as np 
+import pickle
 
 def run_models(input_dict):
 
@@ -21,15 +22,35 @@ def run_models(input_dict):
     # 
 
     print("Here is the model input.....")
-    model_input = np.array(some_list)
+    model_input = np.array(some_list).reshape(1,-1)
     print(model_input)
 
-    OU_model = tf.keras.models.load_model('nn_model_OU.h5')
-    print("HERE IS THE MODELS PREDICTION....")
-    predict = OU_model.predict(model_input)
-    print(predict)
+    ML_model = tf.keras.models.load_model('nn_model_ML.h5')
+    #spread_model = tf.keras.models.load_model('nn_model_spread.h5') 
+    #OU_model = tf.keras.models.load_model('nn_model_OU.h5')
 
-    #OU_model.summary()
+    ML_scaler = pickle.load(open('scaler_ML.pkl','rb'))
+    #spread_scaler = pickle.load(open('scaler_spread.pkl','rb'))
+    #OU_scaler = pickle.load(open('scaler_OU.pkl','rb'))
+
+    ML_scaled = ML_scaler.transform(model_input)
+    #spread_scaled = spread_scaler.transform(#)
+    #OU_scaled = OU_scaler.transform(#)
+
+
+  
+    print("HERE IS THE ML MODEL'S PREDICTION....")
+    ML_prediction = ML_model.predict(ML_scaled)
+    print(ML_prediction)
+
+    #print("HERE IS THE SPREAD MODEL'S PREDICTION....")
+    #spread_prediction = spread_model.predict(#model_input)
+    #print(spread_prediction)
+
+    #print("HERE IS THE OU MODEL'S PREDICTION....")
+    #OU_prediction = OU_model.predict(#model_input)
+    #print(OU_prediction)
+
 
     # TO-DO...
     
@@ -43,6 +64,9 @@ def run_models(input_dict):
 
     # Figure out Visualizations / create them 
         # Are we creating anohter HTML file to display figures and predictions?
+        # Line graph of last 1o guesses
+        # 3 Gauges of prediction
+        # GIF of whether you should bet on it or not (determine a threshold)
 
     # Import in rest of models
 
@@ -52,15 +76,4 @@ def run_models(input_dict):
 
     # Presentation stuff 
 
-
-
-
-
-
-
-
-
-
-    
-
-    return 'The 3 outputs'
+    return ML_prediction[0][0]

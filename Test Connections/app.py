@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for, request
 #from flask_pymongo import PyMongo
 import pymongo
 import UserInputCleaning
-# import ML
+import ML
 
 
 
@@ -62,10 +62,9 @@ def submit():
     #print(request.args.to_dict())
 
 
-    # output = ML.run_models(clean_user_inputs)
-    # print(output)
+    output = ML.run_models(clean_user_inputs)
 
-    return 'what goes here'
+    return {'Output':str(output)}
 
 if __name__ == "__main__":
    app.run()
