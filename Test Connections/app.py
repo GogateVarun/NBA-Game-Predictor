@@ -2,7 +2,7 @@ from flask import Flask, render_template, redirect, url_for, request
 #from flask_pymongo import PyMongo
 import pymongo
 import UserInputCleaning
-import ML
+# import ML
 
 
 
@@ -31,8 +31,10 @@ def submit():
     value_ml_input = request.args.get('value_ml')
     bet_spread_input = request.args.get('bet_spread')
     value_spread_input = request.args.get('value_spread')
+    odds_spread_input = request.args.get('odds_spread')
     bet_ou_input = request.args.get('bet_ou')
     value_ou_input = request.args.get('value_ou')
+    odds_ou_input = request.args.get('odds_ou')
 
     user_inputs = {
         'home_away': home_away_input,
@@ -40,8 +42,10 @@ def submit():
         'value_ml': value_ml_input,
         'bet_spread': bet_spread_input,
         'value_spread':value_spread_input,
+        'odds_spread':odds_spread_input,
         'bet_ou': bet_ou_input,
-        'value_ou': value_ou_input
+        'value_ou': value_ou_input,
+        'odds_ou': odds_ou_input
     }
 
     user_inputs = dict(user_inputs)
@@ -58,8 +62,8 @@ def submit():
     #print(request.args.to_dict())
 
 
-    output = ML.run_models(clean_user_inputs)
-    print(output)
+    # output = ML.run_models(clean_user_inputs)
+    # print(output)
 
     return 'what goes here'
 
