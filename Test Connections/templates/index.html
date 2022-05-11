@@ -15,45 +15,65 @@
 	</div>
     <div class="container-fluid">
 		<div class="row">
-			<ul class="list-group">
-				<li class="list-group-item bg-warning text-dark">
-					<label for="value_ou">Is the Team Home or Away?</label>
-					<input type="text" class="form-control" placeholder="Home/Away" id="home_away" />
-				</li>
-				<li class="list-group-item bg-warning text-dark">
-					<label for="value_ou">Bet on the Moneyline</label>
-					<input type="text" class="form-control" placeholder="50.0" id="bet_ml" />
-				</li>
-				<li class="list-group-item bg-warning text-dark">
-					<label for="value_ou">Value of the Moneyline</label>
-					<input type="text" class="form-control" placeholder="100.0" id="value_ml" />
-				</li>
-				<li class="list-group-item bg-warning text-dark">
-					<label for="value_ou">Bet on Spread</label>
-					<input type="text" class="form-control" placeholder="50.0" id="bet_spread" />
-				</li>
-				<li class="list-group-item bg-warning text-dark">
-					<label for="value_ou">Value of the Spread</label>
-					<input type="text" class="form-control" placeholder="10.0" id="value_spread" />
-				</li>
-				<li class="list-group-item bg-warning text-dark">
-					<label for="value_ou">Odds of the Spread</label>
-					<input type="text" class="form-control" placeholder="-110.0" id="odds_spread" />
-				</li>
-				<li class="list-group-item bg-warning text-dark">
-					<label for="value_ou">Bet on Over/Under</label>
-					<input type="text" class="form-control" placeholder="50.0" id="bet_ou" />
-				</li>
-				<li class="list-group-item bg-warning text-dark">
-					<label for="value_ou">Value of the Over/Under</label>
-					<input type="text" class="form-control" placeholder="-110.0" id="value_ou" />
-				</li>
-				<li class="list-group-item bg-warning text-dark">
-					<label for="value_ou">Odds of the Over/Under</label>
-					<input type="text" class="form-control" placeholder="-110.0" id="odds_ou" />
-				</li>
-				<a type="submit" class="btn btn-success" id="submit_button">Submit</a>
-			</ul>
+			<div class="col-md-4 bg-white text-white">
+				<ul class="list-group">
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Is the Team Home or Away?</label>
+						<input type="text" class="form-control" placeholder="Home/Away" id="home_away" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Bet on the Moneyline</label>
+						<input type="text" class="form-control" placeholder="50.0" id="bet_ml" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Value of the Moneyline</label>
+						<input type="text" class="form-control" placeholder="100.0" id="value_ml" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Bet on Spread</label>
+						<input type="text" class="form-control" placeholder="50.0" id="bet_spread" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Value of the Spread</label>
+						<input type="text" class="form-control" placeholder="10.0" id="value_spread" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Odds of the Spread</label>
+						<input type="text" class="form-control" placeholder="-110.0" id="odds_spread" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Bet on Over/Under</label>
+						<input type="text" class="form-control" placeholder="50.0" id="bet_ou" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Value of the Over/Under</label>
+						<input type="text" class="form-control" placeholder="-110.0" id="value_ou" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Odds of the Over/Under</label>
+						<input type="text" class="form-control" placeholder="-110.0" id="odds_ou" />
+					</li>
+					<a type="submit" class="btn btn-success" id="submit_button">Submit</a>
+				</ul>
+			</div>
+			<!-- This is where we'll insert the visuals of the output -->
+			<div class="col-md-4 bg-secondary">
+				<!-- This is where we'll insert MoneyLine gauge -->
+				<div id="gauge_ml"></div>
+			</div>
+			<div class="col-md-4 bg-secondary">
+				<!-- This is where we'll insert Spread gauge -->
+				<div id="gauge_spread"></div>
+			</div>
+			<!-- <div class="col-md-3 bg-secondary">
+				This is where we'll insert Over/Under gauge
+				<div id="gauge_ou"></div>
+			</div> -->
+		</div>
+		<div class="container-fluid bg-dark">
+			<div class="row">
+				<br>
+			</div>
 		</div>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, jsonify
 #from flask_pymongo import PyMongo
 import pymongo
 import UserInputCleaning
@@ -64,7 +64,7 @@ def submit():
 
     output = ML.run_models(clean_user_inputs)
 
-    return output
+    return jsonify(output)
 
 if __name__ == "__main__":
    app.run()
