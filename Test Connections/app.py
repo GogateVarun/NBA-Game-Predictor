@@ -51,7 +51,7 @@ def submit():
     user_inputs = dict(user_inputs)
   
     # this "Test" below is what created the test collection within the "Test" database created above in ln 15
-    collection = db.get_collection('Test')
+    collection = db.get_collection('Input Table')
     collection.insert_many([user_inputs])
     clean_user_inputs = UserInputCleaning.clean_inputs(user_inputs)
 
