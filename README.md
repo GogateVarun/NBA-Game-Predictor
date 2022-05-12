@@ -2,10 +2,10 @@
 # Team-3-Project
 
 ## Members
-- Varun Gogate - Repo, Vis, 
+- Varun Gogate - Repo, Database, Vis
 - Kit Williams - Machine Learning
-- Sakile Trowers - SQL, Database
-- Zach Mehlenbacher - SQL, Database, Vis
+- Sakile Trowers - Vis, Database
+- Zach Mehlenbacher - Framework, Database, Vis
 
 
 ## Project Overview
