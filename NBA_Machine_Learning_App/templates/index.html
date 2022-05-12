@@ -9,19 +9,19 @@
 	<link href="../static/css/style.css" rel="stylesheet">
 </head>
 <body>
-	<nav class="navbar navbar-expand-lg navbar-secondary bg-primary">
-		<a class="navbar-brand" href="index.html">
-		<h2>Team 3</h2></a> <button aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarTogglertest" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+	<nav class="navbar navbar-expand-lg navbar-secondary bg-secondary">
+		<a class="navbar-brand" href="https://docs.google.com/presentation/d/1pg1xgsjBsOmQrMdxlT2wFP6VxVbv49QSj2FkXTKnR-k/edit?usp=sharing" target="_blank">
+		<h2>Team 3</h2></a><button aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarTogglertest" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
 		<div class="collapse navbar-collapse" id="navbarTogglertest">
 			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
 				<li class="nav-item active">
 					<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="/about_us.html">About Us</a>
+					<a class="nav-link" href="https://www.bettingbrain.com/sports-bet/nba-betting/" target="_blank">Resource</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="/resources.html">Resources</a>
+				<li class="nav-item text-warning">
+					<a class="nav-link" href="https://www.ncpgambling.org/help-treatment/national-helpline-1-800-522-4700/" target="_blank">Problem Gambling?</a>
 				</li>
 			</ul>
 		</div>
@@ -39,10 +39,12 @@
 		</div>
 	</div>
     <div class="container-fluid" style="padding:0px;margin:0">
-        <div class="p-2 mb-4 bg-danger text-white">
+        <div class="p-2 mb-4 bg-secondary text-white">
             <div class="row">
-                <div class="col-md-4">
-                <h2>Can Machine Learning beat the house?<br><small>Use the model below to determine your best bet!</small></h2>
+                <div class="col-md-4 text-center">
+                	<h4>Can machine learning beat the house?<h4>
+						<br>
+					<p><small>Input current betting data using the model inputs below to determine your best bet!<sup>*</sup></small></p>
                 </div>
                 <div class="col-md-8">
                 <p>
@@ -50,6 +52,8 @@
 					<p	style="text-align:center;">
                         <li>With so many sports books available, how can you be sure you are getting the best odds?</li>
                         <li>Our machine learning model can test the odds and give you a score of how accurate they are.</li>
+						<li>Simply put in the current betting data and the gauges will update with the accuarcy score.</li>
+						<li>For more information about current betting data and terminology, please click the 'Resource' link above.</li>
                     </ul>
                 </p>
                 </div>
@@ -57,67 +61,65 @@
         </div>
     </div>
 	<div class="container-fluid">
-		<div class="row">
-			<a type="refresh" class="btn btn-success" href="/">Refresh Page</a>
-		</div>
+		<a type="refresh" class="btn btn-success" href="/">Try Again?</a>
 	</div>
     <div class="container-fluid">
 		<div class="row">
-			<div class="col-md-3 bg-white text-white">
+			<div class="col-md-3">
 				<ul class="list-group">
-					<li class="list-group-item bg-warning text-dark">
+					<li class="list-group-item bg-danger text-light">
 						<label for="value_ou">Is the Team Home or Away?</label>
 						<input type="text" class="form-control" placeholder="Home/Away" id="home_away" />
 					</li>
-					<li class="list-group-item bg-warning text-dark">
+					<li class="list-group-item bg-danger text-light">
 						<label for="value_ou">Bet on the Moneyline</label>
 						<input type="text" class="form-control" placeholder="50.0" id="bet_ml" />
 					</li>
-					<li class="list-group-item bg-warning text-dark">
+					<li class="list-group-item bg-danger text-light">
 						<label for="value_ou">Value of the Moneyline</label>
 						<input type="text" class="form-control" placeholder="100.0" id="value_ml" />
 					</li>
-					<li class="list-group-item bg-warning text-dark">
+					<li class="list-group-item bg-danger text-light">
 						<label for="value_ou">Bet on Spread</label>
 						<input type="text" class="form-control" placeholder="50.0" id="bet_spread" />
 					</li>
-					<li class="list-group-item bg-warning text-dark">
+					<li class="list-group-item bg-danger text-light">
 						<label for="value_ou">Value of the Spread</label>
 						<input type="text" class="form-control" placeholder="10.0" id="value_spread" />
 					</li>
-					<li class="list-group-item bg-warning text-dark">
+					<li class="list-group-item bg-danger text-light">
 						<label for="value_ou">Odds of the Spread</label>
 						<input type="text" class="form-control" placeholder="-110.0" id="odds_spread" />
 					</li>
-					<li class="list-group-item bg-warning text-dark">
+					<li class="list-group-item bg-danger text-light">
 						<label for="value_ou">Bet on Over/Under</label>
 						<input type="text" class="form-control" placeholder="50.0" id="bet_ou" />
 					</li>
-					<li class="list-group-item bg-warning text-dark">
+					<li class="list-group-item bg-danger text-light">
 						<label for="value_ou">Value of the Over/Under</label>
 						<input type="text" class="form-control" placeholder="215.0" id="value_ou" />
 					</li>
-					<li class="list-group-item bg-warning text-dark">
+					<li class="list-group-item bg-danger text-light">
 						<label for="value_ou">Odds of the Over/Under</label>
 						<input type="text" class="form-control" placeholder="-110.0" id="odds_ou" />
 					</li>
 					<a type="submit" class="btn btn-success" id="submit_button">Submit</a>
 				</ul>
 			</div>
-			<div class="col-md-3 bg-secondary">
+			<div class="col-md-3">
 				<div id="gauge_ml"></div>
 				<iframe id="ml_gif" width="275" height="250" frameBorder="0" class="giphy-embed"></iframe>
 			</div>
-			<div class="col-md-3 bg-secondary">
+			<div class="col-md-3">
 				<div id="gauge_spread"></div>
 				<iframe id="spread_gif" width="275" height="250" frameBorder="0" class="giphy-embed"></iframe>
 			</div>
-			<div class="col-md-3 bg-secondary">
+			<div class="col-md-3">
 				<div id="gauge_OU"></div>
 				<iframe id="OU_gif" width="275" height="250" frameBorder="0" class="giphy-embed"></iframe>
 			</div> 
 		</div>
-		<div class="container-fluid bg-dark">
+		<div class="container-fluid">
 			<div class="row">
 				<br>
 			</div>
@@ -128,12 +130,15 @@
 	<script type="text/javascript" src="{{ url_for('static', filename='js/charts.js') }}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/gifs.js') }}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
-	<footer class="container-fluid bg-primary text-center text-white" style="padding:0;margin:0"><br><br>
-		<p><strong>Team 3 would love your feedback</strong><br>Click a team member's name below to contact them directly<br></p>
+	<footer class="container-fluid bg-secondary text-center text-light" style="padding:0;margin:0"><br><br>
+		<h3>Team 3 would love your feedback</h3>
+		<p>Click a team member's name below to contact them directly<br></p>
 			<a href="mailto:strowers2018@gmail.com" title="Sakile's email"><b>Sakile</b></a>&emsp;&emsp;
 			<a href="mailto:kwnmsc7@gmail.com" title="Kit's email"><b>Kit</b></a>&emsp;&emsp;
 			<a href="mailto:gogatevarun@gmail.com" title="Varun's email"><b>Varun</b></a>&emsp;&emsp;
 			<a href="mailto:zach.mehlenbacher@gmail.com" title="Zach's email"><b>Zach</b></a>
+			<br>
+		<p class="text-warning"><strong><sup>*</sup></strong><i>This applcation was created for academic purposes in a learning environment and is not intended for gambling-use.</i><sup><strong>*</strong></sup></p>
 	</footer>
 </body>
 </html>
