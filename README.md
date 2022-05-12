@@ -75,10 +75,10 @@ Net Return: -$18.18
 
 
 
-Overall Return Using a Threshold of > 50%:
-Wagered: $25,100
-Earned: $314.15
-Return on Investment: 1.25%
+Overall Return Using a Threshold of > 50%:                    
+Wagered: $25,100                      
+Earned: $314.15                     
+Return on Investment: 1.25%                 
 
 
 We then looked to improve upon these results. With the models already trained, we decided to fine tune the thresholds of when the model tells you to place a bet. We adjusted each model's threshold and find the most optimal outputs. These graphs are shown below.
@@ -100,9 +100,9 @@ Net Return: $863.64
 
 
 
-Overall Return Using a Threshold of > 50%:
-Wagered: $12,900
-Earned: $1,796.12
+Overall Return Using Tuned Thresholds:                             
+Wagered: $12,900                              
+Earned: $1,796.12                         
 Return on Investment: 13.92%
 
 
