@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Test Connections</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<a type="refresh" class="btn btn-success" href="/">Refresh Page</a>
+		</div>
+	</div>
+    <div class="container-fluid">
+		<div class="row">
+			<div class="col-md-3 bg-white text-white">
+				<ul class="list-group">
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Is the Team Home or Away?</label>
+						<input type="text" class="form-control" placeholder="Home/Away" id="home_away" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Bet on the Moneyline</label>
+						<input type="text" class="form-control" placeholder="50.0" id="bet_ml" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Value of the Moneyline</label>
+						<input type="text" class="form-control" placeholder="100.0" id="value_ml" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Bet on Spread</label>
+						<input type="text" class="form-control" placeholder="50.0" id="bet_spread" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Value of the Spread</label>
+						<input type="text" class="form-control" placeholder="10.0" id="value_spread" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Odds of the Spread</label>
+						<input type="text" class="form-control" placeholder="-110.0" id="odds_spread" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Bet on Over/Under</label>
+						<input type="text" class="form-control" placeholder="50.0" id="bet_ou" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Value of the Over/Under</label>
+						<input type="text" class="form-control" placeholder="-110.0" id="value_ou" />
+					</li>
+					<li class="list-group-item bg-warning text-dark">
+						<label for="value_ou">Odds of the Over/Under</label>
+						<input type="text" class="form-control" placeholder="-110.0" id="odds_ou" />
+					</li>
+					<a type="submit" class="btn btn-success" id="submit_button">Submit</a>
+				</ul>
+			</div>
+			<!-- Harden look away gif - red_gauge -->
+			<!-- <iframe id=Harden src="https://giphy.com/embed/3oAt2dA6LxMkRrGc0g" width="180" height="168" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
+			<!-- <p><a href="https://giphy.com/gifs/3oAt2dA6LxMkRrGc0g">via GIPHY</a></p>-->
+
+			<!-- Westbrook shrug - yellow_gauge -->
+			<!-- <iframe id=Westbrook src="https://giphy.com/embed/syBmkKtvQ2xYgSX22t" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
+			<!-- <p><a href="https://giphy.com/gifs/jumpman23-yawn-russell-westbrook-syBmkKtvQ2xYgSX22t">via GIPHY</a></p>-->
+
+			<!-- Steve Ballmer thumbs up - green_gauge -->
+			<!-- <iframe id=Steve src="https://giphy.com/embed/JTy79YRYXtPy3YNWbg" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
+			<!-- <p><a href="https://giphy.com/gifs/laclippers-clippers-la-steve-ballmer-JTy79YRYXtPy3YNWbg">via GIPHY</a></p>-->
+
+			<!-- This is where we'll insert the visuals of the output -->
+			<div class="col-md-3 bg-secondary">
+				<!-- This is where we'll insert MoneyLine gauge -->
+				<div id="gauge_ml"></div>
+				<iframe id="ml_gif" width="275" height="250" frameBorder="0" class="giphy-embed"></iframe>
+			</div>
+
+			<div class="col-md-3 bg-secondary">
+				<!-- This is where we'll insert Spread gauge -->
+				<div id="gauge_spread"></div>
+				<iframe id="spread_gif" width="275" height="250" frameBorder="0" class="giphy-embed"></iframe>
+			</div>
+
+			<div class="col-md-3 bg-secondary">
+				<!-- This is where we'll insert O/U gauge -->
+				<div id="gauge_OU"></div>
+				<iframe id="OU_gif" width="275" height="250" frameBorder="0" class="giphy-embed"></iframe>
+			</div> 
+
+		</div>
+		<div class="container-fluid bg-dark">
+			<div class="row">
+				<br>
+			</div>
+		</div>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/charts.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/gifs.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
+  	
+</body>
+</html>
