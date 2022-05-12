@@ -1,7 +1,11 @@
-.strokeme {
-    color: white;
-    text-shadow: -1px 0px 0 #000, 0px 1px 0 #000, 1px 0px 0 #000, 0px -1px 0 #000;
+.textformat {
+    color: #ffffff;
   }
+
+.textformat2 {
+  color: #ffffff;
+  text-shadow: -1px 0px 0 #17408B, 0px 1px 0 #17408B, 1px 0px 0 #17408B, 0px -1px 0 #17408B;
+}
 
 #gender{
     width:375px;   
@@ -31,6 +35,8 @@ body {
 a { color: inherit; } 
 
 .jumbotron {
-  background-image: url("../images/bed_banner.jpeg");
+  background-image: url("../images/basketball_header.png");
+  background-size: cover;
+  background-position: center;
   text-align: center;
   }
