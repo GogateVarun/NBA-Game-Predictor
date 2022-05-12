@@ -53,7 +53,7 @@ MoneyLine Prediction Accuracy: 70.2%
 Spread Prediction Accuracy: 53%
 Over/Under Prediction Accuracy: 48.5%
 
-![alt text](https://github.com/ronnierogers/Team-3-Project/main/Resources/ML_Predictions.png)
+![alt text](https://raw.githubusercontent.com/ronnierogers/Team-3-Project/main/Resources/ML_Predictions.png)
 
 
 
