@@ -4,10 +4,58 @@
 	<meta charset="UTF-8">
 	<meta content="IE=edge" http-equiv="X-UA-Compatible">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<title>Test Connections</title>
+	<title>NBA Betting Probability</title>
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../static/css/style.css" rel="stylesheet">
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-secondary bg-primary">
+		<a class="navbar-brand" href="index.html">
+		<h2>Team 3</h2></a> <button aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbarTogglertest" data-toggle="collapse" type="button"><span class="navbar-toggler-icon"></span></button>
+		<div class="collapse navbar-collapse" id="navbarTogglertest">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+					<a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/about_us.html">About Us</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/resources.html">Resources</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="jumbotron" style="padding:50px;margin:0">
+		<h1 class="mb-3 textformat">NBA Betting Probability</h1>
+		<h3 class="mb-3 textformat">How accurate are the odds?</h3>
+		<br>
+		<br>
+		<h5 class="mb-3 textformat">Using 2018-2019 NBA<br>Game Data to Predict Probability<br>of Sportsbook Odds</h5>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<br>
+		</div>
+	</div>
+    <div class="container-fluid" style="padding:0px;margin:0">
+        <div class="p-2 mb-4 bg-danger text-white">
+            <div class="row">
+                <div class="col-md-4">
+                <h2>Can Machine Learning beat the house?<br><small>Use the model below to determine your best bet!</small></h2>
+                </div>
+                <div class="col-md-8">
+                <p>
+                    <ul>
+					<p	style="text-align:center;">
+                        <li>With so many sports books available, how can you be sure you are getting the best odds?</li>
+                        <li>Our machine learning model can test the odds and give you a score of how accurate they are.</li>
+                    </ul>
+                </p>
+                </div>
+            </div>
+        </div>
+    </div>
 	<div class="container-fluid">
 		<div class="row">
 			<a type="refresh" class="btn btn-success" href="/">Refresh Page</a>
@@ -47,7 +95,7 @@
 					</li>
 					<li class="list-group-item bg-warning text-dark">
 						<label for="value_ou">Value of the Over/Under</label>
-						<input type="text" class="form-control" placeholder="-110.0" id="value_ou" />
+						<input type="text" class="form-control" placeholder="215.0" id="value_ou" />
 					</li>
 					<li class="list-group-item bg-warning text-dark">
 						<label for="value_ou">Odds of the Over/Under</label>
@@ -56,37 +104,18 @@
 					<a type="submit" class="btn btn-success" id="submit_button">Submit</a>
 				</ul>
 			</div>
-			<!-- Harden look away gif - red_gauge -->
-			<!-- <iframe id=Harden src="https://giphy.com/embed/3oAt2dA6LxMkRrGc0g" width="180" height="168" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
-			<!-- <p><a href="https://giphy.com/gifs/3oAt2dA6LxMkRrGc0g">via GIPHY</a></p>-->
-
-			<!-- Westbrook shrug - yellow_gauge -->
-			<!-- <iframe id=Westbrook src="https://giphy.com/embed/syBmkKtvQ2xYgSX22t" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
-			<!-- <p><a href="https://giphy.com/gifs/jumpman23-yawn-russell-westbrook-syBmkKtvQ2xYgSX22t">via GIPHY</a></p>-->
-
-			<!-- Steve Ballmer thumbs up - green_gauge -->
-			<!-- <iframe id=Steve src="https://giphy.com/embed/JTy79YRYXtPy3YNWbg" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>-->
-			<!-- <p><a href="https://giphy.com/gifs/laclippers-clippers-la-steve-ballmer-JTy79YRYXtPy3YNWbg">via GIPHY</a></p>-->
-
-			<!-- This is where we'll insert the visuals of the output -->
 			<div class="col-md-3 bg-secondary">
-				<!-- This is where we'll insert MoneyLine gauge -->
 				<div id="gauge_ml"></div>
 				<iframe id="ml_gif" width="275" height="250" frameBorder="0" class="giphy-embed"></iframe>
 			</div>
-
 			<div class="col-md-3 bg-secondary">
-				<!-- This is where we'll insert Spread gauge -->
 				<div id="gauge_spread"></div>
 				<iframe id="spread_gif" width="275" height="250" frameBorder="0" class="giphy-embed"></iframe>
 			</div>
-
 			<div class="col-md-3 bg-secondary">
-				<!-- This is where we'll insert O/U gauge -->
 				<div id="gauge_OU"></div>
 				<iframe id="OU_gif" width="275" height="250" frameBorder="0" class="giphy-embed"></iframe>
 			</div> 
-
 		</div>
 		<div class="container-fluid bg-dark">
 			<div class="row">
@@ -99,6 +128,12 @@
 	<script type="text/javascript" src="{{ url_for('static', filename='js/charts.js') }}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/gifs.js') }}"></script>
 	<script type="text/javascript" src="{{ url_for('static', filename='js/app.js') }}"></script>
-  	
+	<footer class="container-fluid bg-primary text-center text-white" style="padding:0;margin:0"><br><br>
+		<p><strong>Team 3 would love your feedback</strong><br>Click a team member's name below to contact them directly<br></p>
+			<a href="mailto:strowers2018@gmail.com" title="Sakile's email"><b>Sakile</b></a>&emsp;&emsp;
+			<a href="mailto:kwnmsc7@gmail.com" title="Kit's email"><b>Kit</b></a>&emsp;&emsp;
+			<a href="mailto:gogatevarun@gmail.com" title="Varun's email"><b>Varun</b></a>&emsp;&emsp;
+			<a href="mailto:zach.mehlenbacher@gmail.com" title="Zach's email"><b>Zach</b></a>
+	</footer>
 </body>
 </html>
