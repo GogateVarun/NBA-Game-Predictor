@@ -49,9 +49,9 @@ Key points and Features:
 
 After training the 3 models, their prediction accuracies were determined using the testing data...
 
-MoneyLine Prediction Accuracy: 70.2%
-Spread Prediction Accuracy: 53%
-Over/Under Prediction Accuracy: 48.5%
+MoneyLine Prediction Accuracy: 70.2%            
+Spread Prediction Accuracy: 53%                   
+Over/Under Prediction Accuracy: 48.5%                     
 
 ![alt text](https://raw.githubusercontent.com/roonierogers/Team-3-Project/main/Resources/ML_Predictions.jpg)
 
