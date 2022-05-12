@@ -16,7 +16,6 @@ Project Question: Can Vegas odds and historical scores amongst all NBA teams be 
 
 Our dataset was discovered through Kaggle, https://www.kaggle.com/datasets/erichqiu/nba-odds-and-scores.
 
-The data has been cleaned and prepped for database analysis and machine learning.
 
 ## Project plan
 
